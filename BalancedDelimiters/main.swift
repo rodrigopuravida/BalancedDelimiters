@@ -8,5 +8,13 @@
 
 import Foundation
 
-println("Hello, World!")
+var test : BalanceDelimiter
+test = BalanceDelimiter()
+
+var closersToOpeners : [Character: Character] =
+["]": "[",
+    "}": "{",
+    ")": "("]
+
+
 
