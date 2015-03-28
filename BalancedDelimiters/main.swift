@@ -8,13 +8,10 @@
 
 import Foundation
 
-var test : BalanceDelimiter
-test = BalanceDelimiter()
 
-var closersToOpeners : [Character: Character] =
-["]": "[",
-    "}": "{",
-    ")": "("]
+
+
+
 
 
 

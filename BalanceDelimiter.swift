@@ -36,7 +36,25 @@ class BalanceDelimiter
     }
     
     func isBalanced(delimiterString : String) -> Bool {
-        return true
+        
+        var openerStack = Stack<Character>()
+        var expectedOpener : Character
+        
+        for letter in delimiterString {
+            
+            if (self.isOpener(letter)) {
+                openerStack.push(letter)
+            } else if (self.isCloser(letter)) {
+                var expectedOpener : Character = openerStack.pop()
+                if (self.closersToOpeners[letter] != expectedOpener) {
+                    return false
+                }
+            }
+            
+        }
+        
+        
+        return openerStack.items.count == 0
     }
     
 }
